@@ -1,4 +1,4 @@
-arr = [28,17,25,46,39,50,62,7]
+arr = [8, 3, 2, 5, 9, 7, 1]
 # arr = [8,2,3,5,7,1,9]
 n = len(arr)
 
@@ -9,7 +9,7 @@ def bubble_sort_v1(arr):
         m = n - 1 - i
         print(arr, m)
         for j in range(m):
-            if arr[j] < arr[j + 1]:
+            if arr[j] > arr[j + 1]:
                 temp = arr[j+1]
                 arr[j+1] = arr[j]
                 arr[j] = temp
@@ -38,5 +38,9 @@ def bubble_sort_v3(arr):
             j -= 1
 
 
-bubble_sort_v3(arr)
+bubble_sort_v3(arr[:])
+print("v3")
+bubble_sort_v2(arr[:])
+print("v2")
+bubble_sort_v1(arr[:])
 
